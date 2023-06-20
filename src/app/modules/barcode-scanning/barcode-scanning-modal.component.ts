@@ -163,7 +163,9 @@ export class BarcodeScanningModalComponent
         this.closeModal(result.barcode);
       }
     );
+    console.log('before startScan()');
     await BarcodeScanner.startScan(options);
+    console.log('after startScan()');
   }
 
   private async stopScan(): Promise<void> {
